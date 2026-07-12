@@ -32,8 +32,8 @@ const GEMINI_API_KEY = (process.env.GEMINI_API_KEY || "").trim();
 
 const MODEL_CANDIDATES = [
   "gemini-2.0-flash",
-  "gemini-2.5-flash",
-  "gemini-2.5-pro",
+  "gemini-1.5-flash",
+  "gemini-1.5-pro",
 ];
 
 /** Currently active model (dynamically updated to the first working model candidate). */

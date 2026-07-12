@@ -66,9 +66,10 @@ export default function FanHub() {
   const [ecoPoints, setEcoPoints] = useState(35);
   const messagesEndRef = useRef(null);
 
-  /** Scroll chat to bottom when new messages arrive. */
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (typeof messagesEndRef.current?.scrollIntoView === "function") {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages]);
 
   /** Send a chat message to the backend. */
